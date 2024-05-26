@@ -26,3 +26,11 @@ int main(){
     area2(&r,20);
     cout<<endl<<r.length;
 }
+// formation of structure in heap
+struct Reeactangle * fun(){
+    struct Rectangle *p;
+    p=new Rectangle;
+    p->length=10;
+    p->breadth=20;
+    return p;
+}
