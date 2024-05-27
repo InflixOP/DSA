@@ -30,6 +30,7 @@
    - [Geometric Algorithms](#geometric-algorithms)
 6. [Learn About Complexities](#learn-about-complexities)
 7. [Practice Problem Cheat Sheets](#practice-problem-cheat-sheets)
+8. [Manual Notes](#manual-notes)
 
 ---
 
@@ -442,3 +443,58 @@ Backtracking is a technique for finding solutions to combinatorial problems by s
 #### Related Topics:
 
 - [Backtracking Algorithm Tutorial](#)
+
+# Manual Notes:
+
+# C++ Memory Management and Function Calls
+
+This `README.md` file provides an overview of memory management and function calls in C++.
+
+## Pointers
+
+* All pointers of all types take the same size of 8 bytes.
+
+## Heap Memory
+
+* Declaration in heap memory in C++ is done using the `new` keyword.
+* For an array: `a = new int[5];`
+* For a structure: `a = new rectangle;`
+
+## Function Calls
+
+* Call by value in function is not suitable for changing the value of actual parameters.
+* Call by address is used when we have to change the value of actual parameters.
+* Call by reference: the formal parameters becomes the nickname for actual parameters, thus can change the value of actual parameters.
+
+## Returning Array
+
+* When returning an array from a function, use a pointer:
+```c++
+int* fun(int n) {
+    int* p;
+    p = new int[n];
+    return (p);
+}
+
+int main() {
+    int* A;
+    A = fun(5);
+}
+```
+## Arrays
+
+* Arrays are always passed by address, never by value.
+* On passing array to a function, we can use `*` instead of `[]`.
+* Array cannot be passed as call by value to a function, but while using array inside the structure, we can use call by value.
+
+## Classes
+
+* For creating objects of class in C++, the syntax is `classname objectname;`.
+* Use `::` as scope resolution to define the function outside the class.
+* For destroying or removing heap memory, use a destructor: `~class name(){}.`
+* While changing the class to template class, we have to mention the template type after scope resolution also: `template <class T> class Arithmetic{};`.
+
+## Memory Allocation
+
+* Array is created in heap or in stack.
+* Linked list is always created in heap.
