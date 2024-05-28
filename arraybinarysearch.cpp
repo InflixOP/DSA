@@ -27,6 +27,21 @@ int search(struct array arr,int x){
     return -1;
 }
 
+int RecursiveBinary(int a[],int l,int h,int key){
+    int mid;
+    if(l<=h){
+        mid=(l+h)/2;
+        if(key=a[mid]){
+            return mid;
+        }else if(key>a[mid]){
+            return RecursiveBinary(a,mid+1,h,key);
+        }else{
+            return RecursiveBinary(a,l,mid-1,key);
+        }
+    }
+    return -1;
+}
+
 int main(){
     array arr;
     int n,i;
