@@ -14,7 +14,9 @@ void display(struct array arr){
 
 int search(struct array arr,int x){
     for(int i=0;i<arr.length;i++){
-
+        if(x==arr.A[i]){
+            return i;
+        }
     }
 }
 
@@ -30,5 +32,6 @@ int main(){
     for(i=0;i<n;i++){
         cin>>arr.A[i];
     }
+    cout<<"The index of search is:"<<search(arr,4)<<endl;
     display(arr);
 }
