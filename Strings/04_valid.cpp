@@ -1,5 +1,6 @@
 #include<iostream>
-bool valid(char name[])
+using namespace std;
+bool validate(char name[])
 {
     for(int i=0;name[i]!='\0';i++)
     {
@@ -11,6 +12,10 @@ bool valid(char name[])
 int main()
 {
     char name[] ="An3ura835)6HHHg";
-    std::cout<<valid(name);
+    if(validate(name)){
+        cout<<"true";
+    }else{
+        cout<<"False";
+    }
     return 0;
 }
